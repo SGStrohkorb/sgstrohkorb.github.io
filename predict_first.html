@@ -55,14 +55,15 @@
     <div class='row'>
         <div class='col-'></div>
         <div class='col'>
-            <p class='text-center'>This project is an immediate extension of my Udacity capstone project</p>
-            <p class='text-center'></p>
-            <p class='text-center'></p>
-            <p class='text-center'></p>
-            <p class='text-center'></p>
-            <p class='text-center'></p>
-            <p class='text-center'></p>
-            <p class='text-center'></p>
+            <p class='text-center'>This project is an immediate extension of my Udacity capstone project. I wanted to share my predictive analysis of matches in FIRST FRC events. This lead me to create a website, using Django as my back end, Bootstrap 4 as my front end framework, and various AWS services for everything else. Sadly, the website is no longer active due to monetary constraints (I am but a college student).</p>
+
+            <p class='text-center'>The first step of this project was researching and deciding on a web platform to run my website off of. I spent over a week researching all of my different possibilities, but I eventually landed with AWS Elastic Beanstalk for a few reasons. First, it will allow me to integrate in AWS S3, EC2, RDS, and Lambda with ease. Second, there were a number of good tutorials very similar to my use case that I could follow. Lastly, AWS is a very large platform and getting familiar with the ins and outs would be good for the future.</p>
+
+            <p class='text-center'>Now I had to develop my back end with Django. I used Ubuntu 16.04.4 running in a virtual machine on a Windows 10 host for my development environment to keep things simple. I need something that just worked and I could integrate PostgreSQL easily with. I got my Django environment working great with PostgreSQL, modeled my database, created my views, and finally created my HTML templates. But then I wanted to change my database structure, so I started over with a more improved structure.</p>
+
+            <p class='text-center'>Now that I had my Django environment working the way I wanted, I began to deploy it to AWS Elastic Beanstalk. This process was much more involved than I originally though it was going to be. I thought I could deploy my Django environment, write a few AWS Lambda functions to update my database, use S3 as a cache for calculated values, and be done with it. My whole spring break of 2019 and a week after that was spent on getting this portion of my project working. Long story short, I know how to use AWS Lambda really well now!</p>
+
+            <p class='text-center'>And this is where this project stands. I have the ability to predict matches accuracy before they happen and I can display it to the world. I plan to, before the FIRST FRC 2020 season, to continue to refine my front end, to convey my statistics more effectively. I want any FRC team to be able to use this data to better understand why the good teams win and why the bad teams lose, so they all stand a better chance to win.</p>
         </div>
         <div class='col- '></div>
     </div>
