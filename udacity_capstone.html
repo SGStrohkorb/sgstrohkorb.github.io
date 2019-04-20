@@ -55,7 +55,22 @@
     <div class='row'>
         <div class='col-'></div>
         <div class='col'>
+            <p class='text-center'>I really enjoyed what I was learning in Udacity's Machine Learning Engineer course. So much so, that even before I had reached the final project for the course, I began to do predictive analysis on FIRST FRC data from 2016. My initial analysis was promising, I got above 70% accuracy for predicting the outcome of matches. Thus, when the time came for me to work on my capstone project, I naturally chose this.</p>
+
+            <p class='text-center'>Before I dive into talking about this project, there is a 20 page report I wrote with all of the details for this project that can be found <a href='https://github.com/SGStrohkorb/Udacity-Capstone-Project/blob/master/report.pdf'>here</a> and all of the code can be found <a href='https://github.com/SGStrohkorb/Udacity-Capstone-Project'>here</a>. I used python in Jupyer Notebooks for this project.</p>
+
+            <p class='text-center'>To start this project, I needed data. Thankfully <a href='https://www.thebluealliance.com/apidocs/v3'>The Blue Alliance API v3</a> exists. I was able to get a free account with them and learned how to use their API with python's urllib3 module. Now I can get all of the match and ranking data I need. But the data FIRST provides through The Blue Alliance is lacking in one key area, most of the statistics calculated for a given match is recorded for the alliance of three teams, not each individual team. Thus I would need a way to calculate how much each team contributed per match.</p>
+
+            <p class='text-center'>This is where my research for this project really began. I had to find a way to calculate the statistics I needed to figure out how much each team contributed per match. Thankfully, I found this lovely <a href='https://www.chiefdelphi.com/t/overview-and-analysis-of-first-stats/144569'>post</a> by wgardner on Chief Delphi. It details statistics like OPR, DPR, CCWM, OAVE, DAVE, and CPR that I can use feed my machine learning (ML) algorithm. This way the ML algorithm will have the best chance to figure out what teams are the best.</p>
+
+            <p class='text-center'>Now came a critical part of the data analysis, how to take all of the statistics for each team and combine them to form an alliance of three teams, then compare them to another alliance of three teams. The answer that worked surprised me. I added the statistics of each alliance, then subtracted the two alliance's statistics. Thus, my ML algorithm would have a vector of 440 statistics per match, plenty of data for my algorithm to work with.</p>
+
+            <p class='text-center'>After some analysis, I decided to use XGBoost as my ML algorithm. I tuned my hyper-parameters the best I could (to my surprise, I was unable to tune them. See the paper for more details.). I used the first five weeks of data to train off of and the sixth week to test on. I compared my results to the predictions that FIRST generated for those same matches. The results can be seen below:</p>
+
+            <img src="images/udacity_result.png" class='img-fluid' alt='Responsive image'/>
+
             <p class='text-center'></p>
+            <p class='text-center'>This project was a success. I am able to out predict FIRST on their matches. But I wanted to do more than this, so I took this project one step further and turned it into a <a href='/predict_first'>website</a>.</p>
         </div>
         <div class='col- '></div>
     </div>
